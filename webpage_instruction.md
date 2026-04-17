@@ -40,7 +40,8 @@ Here are the links:
 - Wedpage design: 
  - Use Event Jekyll Theme.
  - Webpage should be available in french (default language), german and english. 
-
+ - It should be possible to open the page on a computer or a mobile phone. The scale should be automatically adjusted depending on the device. 
+ 
 ---
 
 **Colors used in the webpage:**

@@ -205,9 +205,17 @@
         }
         .tree-couple {
             display: flex; align-items: center; gap: .5rem;
+            flex-wrap: wrap; justify-content: center;
         }
         .tree-couple .heart {
             color: #f6587a; font-size: .85rem;
+        }
+
+        .tree-parents-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            width: 100%;
         }
 
         /* ── Venue / Map Section ── */
@@ -267,14 +275,22 @@
         @media (max-width: 768px) {
             header h1 { font-size: 2.4rem; }
             .section-heading { font-size: 1.8rem; }
+            nav { flex-wrap: wrap; gap: .5rem; padding: .75rem 1rem; }
+            nav .brand { font-size: .95rem; }
             nav ul { display: none; }
+            nav .nav-right { gap: .75rem; }
+            .lang-btn { padding: .2rem .4rem; font-size: .7rem; }
             .map-image-grid { grid-template-columns: 1fr; }
-            .venue-photo { height: 280px; }
-            .tree-row { gap: .75rem; }
-            .tree-person { min-width: 100px; padding: .75rem 1rem; }
-            .tree-person .name { font-size: .85rem; }
+            .venue-photo { height: 250px; }
+            .tree-parents-grid { grid-template-columns: 1fr; }
+            .tree-row { gap: .5rem; }
+            .tree-person { min-width: 90px; padding: .6rem .8rem; }
+            .tree-person .name { font-size: .8rem; }
+            .tree-person .role { font-size: .68rem; }
             .tree-person.baby { min-width: 100px; min-height: 100px; padding: 1rem; }
             .tree-person.baby .name { font-size: 1.1rem; }
+            section { padding: 3.5rem 1rem; }
+            .btn-xl { padding: .7rem 1.5rem; font-size: .8rem; }
         }
     </style>
 </head>
@@ -424,7 +440,7 @@
             <div class="map-image-grid">
                 <div id="map"></div>
                 <figure class="venue-photo-wrap">
-                    <img src="/static/kanuclub_picture.jpg" alt="Kanu-Club Dietikon" class="venue-photo">
+                    <img src="static/kanuclub_picture.jpg" alt="Kanu-Club Dietikon" class="venue-photo">
                     <figcaption>
                         <span class="fr">Photo : <a href="https://www.kanuclub-dietikon.ch/" target="_blank" rel="noopener noreferrer">kanuclub-dietikon.ch</a></span>
                         <span class="de">Foto: <a href="https://www.kanuclub-dietikon.ch/" target="_blank" rel="noopener noreferrer">kanuclub-dietikon.ch</a></span>
@@ -547,7 +563,7 @@
                 <div class="tree-connector"></div>
 
                 <!-- Two-column: Mother's side / Father's side -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; width: 100%;">
+                <div class="tree-parents-grid">
                     <!-- Mother's side (Elise) -->
                     <div class="tree-group">
                         <div class="tree-section-title">
