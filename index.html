@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jules Welcome Party</title>
-    <!-- Pacifico = closest free Google Font to a "Child Hood" style -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&family=Droid+Serif:ital,wght@0,400;1,400&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
+    <!-- "Kranky" from Google Fonts is used for the event title (https://fonts.google.com/specimen/Kranky). -->
+    <link href="https://fonts.googleapis.com/css2?family=Kranky&family=Montserrat:wght@400;700&family=Droid+Serif:ital,wght@0,400;1,400&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
@@ -31,7 +31,7 @@
             display: flex; justify-content: space-between; align-items: center;
         }
         nav .brand {
-            font-family: 'Pacifico', cursive;
+            font-family: 'Kranky', cursive;
             font-size: 1.1rem;
             color: #fed136;
             text-decoration: none;
@@ -56,11 +56,6 @@
 
         /* ── Hero / Header ── */
         header {
-            /*
-             * TO CUSTOMIZE: Replace the gradient below with your Ghibli-style baby portrait:
-             * background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-             *             url('/static/ghibli-baby.jpg') center/cover no-repeat;
-             */
             background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)),
                         linear-gradient(135deg, #f9c06a 0%, #f6587a 50%, #6a82fb 100%);
             min-height: 100vh;
@@ -74,7 +69,7 @@
             margin-bottom: .75rem; opacity: .9;
         }
         header h1 {
-            font-family: 'Pacifico', cursive;
+            font-family: 'Kranky', cursive;
             font-size: 4rem;
             margin-bottom: 1rem;
             text-shadow: 2px 3px 8px rgba(0,0,0,.4);
@@ -122,6 +117,24 @@
         }
         .detail-item p { font-family: 'Droid Serif', serif; color: #555; line-height: 1.6; }
 
+        /* ── Gift message ── */
+        .gift-message {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #fff;
+            border-left: 4px solid #fed136;
+            border-radius: 6px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .gift-message i { font-size: 2rem; color: #fed136; margin-bottom: .75rem; }
+        .gift-message p {
+            font-family: 'Droid Serif', serif;
+            color: #555; line-height: 1.7; font-style: italic;
+        }
+
         /* ── Food Section ── */
         #food { background: #fff; }
         .food-grid {
@@ -144,12 +157,85 @@
         .food-card ul { list-style: none; padding: 0; }
         .food-card ul li::before { content: "• "; color: #fed136; font-weight: bold; }
 
+        /* ── Guests / Family Tree Section ── */
+        #guests { background: #fff; }
+        .family-tree {
+            display: flex; flex-direction: column; align-items: center; gap: 0;
+            margin-top: 1rem;
+        }
+        .tree-connector {
+            width: 2px; height: 30px; background: #fed136; margin: 0 auto;
+        }
+        .tree-person {
+            background: #f7f7f7; border-radius: 10px; padding: 1rem 1.5rem;
+            text-align: center; min-width: 120px;
+            box-shadow: 0 2px 10px rgba(0,0,0,.07);
+        }
+        .tree-person.baby {
+            background: #fed136; color: #222;
+            font-weight: 700; font-size: 1.2rem;
+            padding: 1.5rem 2rem; border-radius: 50%;
+            min-width: 130px; min-height: 130px;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            box-shadow: 0 4px 20px rgba(254,209,54,.4);
+        }
+        .tree-person .name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; font-size: .95rem; margin-bottom: .2rem;
+        }
+        .tree-person .role {
+            font-family: 'Droid Serif', serif;
+            font-size: .75rem; color: #999; font-style: italic;
+        }
+        .tree-person.baby .role { color: #555; }
+        .tree-person.baby .name { font-family: 'Kranky', cursive; font-size: 1.4rem; }
+        .tree-person.baby i { font-size: 1.5rem; margin-bottom: .3rem; }
+        .tree-group {
+            display: flex; flex-direction: column; align-items: center; gap: 0;
+        }
+        .tree-row {
+            display: flex; justify-content: center; align-items: flex-start;
+            flex-wrap: wrap; gap: 1rem;
+        }
+        .tree-section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: .8rem; text-transform: uppercase; letter-spacing: 1px;
+            color: #fed136; margin: 2rem 0 1rem; width: 100%; text-align: center;
+        }
+        .tree-couple {
+            display: flex; align-items: center; gap: .5rem;
+        }
+        .tree-couple .heart {
+            color: #f6587a; font-size: .85rem;
+        }
+
         /* ── Venue / Map Section ── */
         #venue { background: #f7f7f7; }
+        .map-image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
         #map {
             width: 100%; height: 450px; border-radius: 6px;
-            box-shadow: 0 4px 20px rgba(0,0,0,.12); margin-top: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,.12);
         }
+        .venue-photo-wrap { position: relative; }
+        .venue-photo {
+            width: 100%; height: 450px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.12);
+        }
+        .venue-photo-wrap figcaption {
+            margin-top: .4rem;
+            font-family: 'Droid Serif', serif;
+            font-size: .78rem; font-style: italic; color: #999;
+            text-align: right;
+        }
+        .venue-photo-wrap figcaption a { color: #999; }
         .map-link-wrap { margin-top: 1.5rem; }
         .venue-info-grid {
             display: grid;
@@ -182,10 +268,17 @@
             header h1 { font-size: 2.4rem; }
             .section-heading { font-size: 1.8rem; }
             nav ul { display: none; }
+            .map-image-grid { grid-template-columns: 1fr; }
+            .venue-photo { height: 280px; }
+            .tree-row { gap: .75rem; }
+            .tree-person { min-width: 100px; padding: .75rem 1rem; }
+            .tree-person .name { font-size: .85rem; }
+            .tree-person.baby { min-width: 100px; min-height: 100px; padding: 1rem; }
+            .tree-person.baby .name { font-size: 1.1rem; }
         }
     </style>
 </head>
-<body class="lang-en">
+<body class="lang-fr">
 
     <!-- Navigation -->
     <nav>
@@ -195,22 +288,18 @@
                 <li><a href="#details"><span class="fr">Détails</span><span class="de">Details</span><span class="en">Details</span></a></li>
                 <li><a href="#food"><span class="fr">Repas</span><span class="de">Essen</span><span class="en">Food</span></a></li>
                 <li><a href="#venue"><span class="fr">Lieu</span><span class="de">Ort</span><span class="en">Venue</span></a></li>
+                <li><a href="#guests"><span class="fr">Invités</span><span class="de">Gäste</span><span class="en">Guests</span></a></li>
             </ul>
             <div class="lang-switcher">
-                <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
+                <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
                 <button class="lang-btn" id="btn-de" onclick="setLang('de')">DE</button>
-                <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
     <header id="page-top">
-        <div class="intro-lead-in">
-            <span class="fr">Vous êtes invité·e·s !</span>
-            <span class="de">Du bist eingeladen!</span>
-            <span class="en">You're Invited!</span>
-        </div>
         <h1>Jules Welcome Party</h1>
         <div class="intro-heading-detail">
             <span class="fr">Samedi 6 juin 2026 &bull; Arrivée à 12h00 &bull; Kanu-Club Dietikon</span>
@@ -262,6 +351,16 @@
                     <p>Kanu-Club Dietikon</p>
                 </div>
             </div>
+
+            <!-- No-gift message -->
+            <div class="gift-message">
+                <i class="fas fa-gift"></i>
+                <p>
+                    <span class="fr">Votre présence à la fête est le plus beau cadeau que Jules puisse souhaiter.</span>
+                    <span class="de">Eure Anwesenheit an der Feier ist das schönste Geschenk, das sich Jules wünschen kann.</span>
+                    <span class="en">Your presence at the party is the greatest gift Jules could wish for.</span>
+                </p>
+            </div>
         </div>
     </section>
 
@@ -302,10 +401,11 @@
                     <i class="fas fa-bowl-food"></i>
                     <h3><span class="fr">Fourni sur place</span><span class="de">Wird bereitgestellt</span><span class="en">Provided</span></h3>
                     <ul>
-                        <li><span class="fr">Salades variées</span><span class="de">Verschiedene Salate</span><span class="en">Various salads</span></li>
+                        <li><span class="fr">Une variété de salades</span><span class="de">Eine Auswahl an Salaten</span><span class="en">A variety of salads</span></li>
                         <li><span class="fr">Pains</span><span class="de">Brot</span><span class="en">Bread</span></li>
                         <li><span class="fr">Boissons</span><span class="de">Getränke</span><span class="en">Drinks</span></li>
                         <li><span class="fr">Desserts</span><span class="de">Desserts</span><span class="en">Desserts</span></li>
+                        <li><span class="fr">Couverts et verres pour tous</span><span class="de">Besteck und Gläser für alle</span><span class="en">Forks, knives, and glasses for all guests</span></li>
                     </ul>
                 </div>
             </div>
@@ -321,13 +421,30 @@
                 <span class="en">Venue</span>
             </h2>
             <p class="section-subheading">Kanu-Club Dietikon</p>
-            <div id="map"></div>
+            <div class="map-image-grid">
+                <div id="map"></div>
+                <figure class="venue-photo-wrap">
+                    <img src="/static/kanuclub_picture.jpg" alt="Kanu-Club Dietikon" class="venue-photo">
+                    <figcaption>
+                        <span class="fr">Photo : <a href="https://www.kanuclub-dietikon.ch/" target="_blank" rel="noopener noreferrer">kanuclub-dietikon.ch</a></span>
+                        <span class="de">Foto: <a href="https://www.kanuclub-dietikon.ch/" target="_blank" rel="noopener noreferrer">kanuclub-dietikon.ch</a></span>
+                        <span class="en">Photo: <a href="https://www.kanuclub-dietikon.ch/" target="_blank" rel="noopener noreferrer">kanuclub-dietikon.ch</a></span>
+                    </figcaption>
+                </figure>
+            </div>
             <div class="map-link-wrap">
                 <a class="btn-xl" href="https://www.google.com/maps/search/?api=1&query=Kanu-Club+Dietikon+Unterengstringen" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-map"></i>&nbsp;
                     <span class="fr">Ouvrir dans Google Maps</span>
                     <span class="de">In Google Maps öffnen</span>
                     <span class="en">Open in Google Maps</span>
+                </a>
+                &nbsp;
+                <a class="btn-xl" href="https://www.kanuclub-dietikon.ch/" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-globe"></i>&nbsp;
+                    <span class="fr">Site du club</span>
+                    <span class="de">Website des Klubs</span>
+                    <span class="en">Club website</span>
                 </a>
             </div>
 
@@ -344,26 +461,288 @@
                 <div class="venue-info-card">
                     <h4><i class="fas fa-train"></i><span class="fr">En train</span><span class="de">Mit dem Zug</span><span class="en">By Train</span></h4>
                     <p>
-                        <span class="fr">Arrêtez-vous à la gare de Dietikon Bahnhof, puis marchez 10 minutes en direction de la rivière Limmat.</span>
-                        <span class="de">Haltet am Bahnhof Dietikon und geht 10 Minuten in Richtung der Limmat.</span>
-                        <span class="en">Stop at Dietikon Bahnhof train station and walk 10 minutes toward the Limmat river.</span>
+                        <span class="fr">Arrêtez-vous à la gare de Dietikon Bahnhof, puis marchez 10 minutes.</span>
+                        <span class="de">Haltet am Bahnhof Dietikon und geht 10 Minuten zu Fuss.</span>
+                        <span class="en">Stop at Dietikon Bahnhof train station and walk 10 minutes.</span>
                     </p>
                 </div>
                 <div class="venue-info-card">
                     <h4><i class="fas fa-tree"></i><span class="fr">En plein air</span><span class="de">Im Freien</span><span class="en">Outdoors</span></h4>
                     <p>
-                        <span class="fr">La fête se déroulera principalement dans le jardin du club. En cas de mauvais temps, un abri couvert peut accueillir tout le monde.</span>
-                        <span class="de">Die Feier findet hauptsächlich im Garten des Klubs statt. Bei schlechtem Wetter gibt es auch einen überdachten Unterstand für alle.</span>
-                        <span class="en">The party will mainly take place in the club garden. In case of bad weather, there is a shelter with capacity for everyone.</span>
+                        <span class="fr">La fête se déroulera principalement dans le jardin du club. En cas de mauvais temps, une cabane peut accueillir tout le monde.</span>
+                        <span class="de">Die Feier findet hauptsächlich im Garten des Klubs statt. Bei schlechtem Wetter gibt es auch eine Hütte mit Platz für alle.</span>
+                        <span class="en">The party will mainly take place in the club garden. In case of bad weather, there is a cabin with capacity for everyone.</span>
                     </p>
                 </div>
                 <div class="venue-info-card">
                     <h4><i class="fas fa-circle-info"></i><span class="fr">Infos pratiques</span><span class="de">Praktische Infos</span><span class="en">Practical Info</span></h4>
                     <p>
-                        <span class="fr">Toilettes Kompotoi disponibles sur place.<br>Attention : pas d'eau potable sur place, uniquement de l'eau de source.</span>
-                        <span class="de">Kompotoi-Toiletten sind vor Ort vorhanden.<br>Achtung: kein Trinkwasser vor Ort, nur Grundwasser.</span>
-                        <span class="en">Kompotoi toilets available on site.<br>Note: no drinkable water on site, only ground water.</span>
+                        <span class="fr">Toilettes Kompotoi disponibles sur place.<br>Pas d'eau potable sur place (uniquement de l'eau de source). Des bouteilles d'eau seront à disposition.</span>
+                        <span class="de">Kompotoi-Toiletten sind vor Ort vorhanden.<br>Kein Trinkwasser vor Ort (nur Grundwasser). Wasserflaschen werden bereitgestellt.</span>
+                        <span class="en">Kompotoi toilets available on site.<br>No drinkable water on site (only ground water). Water bottles will be provided for drinks.</span>
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guests / Family Tree -->
+    <section id="guests">
+        <div class="container text-center">
+            <h2 class="section-heading">
+                <span class="fr">La famille de Jules</span>
+                <span class="de">Jules' Familie</span>
+                <span class="en">Jules' Family</span>
+            </h2>
+            <p class="section-subheading">
+                <span class="fr">L'arbre des proches de Jules</span>
+                <span class="de">Jules' Familienstammbaum</span>
+                <span class="en">Jules' family tree</span>
+            </p>
+
+            <div class="family-tree">
+                <!-- Jules -->
+                <div class="tree-row">
+                    <div class="tree-person baby">
+                        <i class="fas fa-baby"></i>
+                        <div class="name">Jules</div>
+                        <div class="role">
+                            <span class="fr">Le bébé star !</span>
+                            <span class="de">Der kleine Star!</span>
+                            <span class="en">The little star!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-connector"></div>
+
+                <!-- Parents -->
+                <div class="tree-section-title">
+                    <span class="fr"><i class="fas fa-heart"></i> Parents</span>
+                    <span class="de"><i class="fas fa-heart"></i> Eltern</span>
+                    <span class="en"><i class="fas fa-heart"></i> Parents</span>
+                </div>
+                <div class="tree-row">
+                    <div class="tree-couple">
+                        <div class="tree-person">
+                            <div class="name">Elise</div>
+                            <div class="role">
+                                <span class="fr">Maman</span>
+                                <span class="de">Mama</span>
+                                <span class="en">Mother</span>
+                            </div>
+                        </div>
+                        <span class="heart">&hearts;</span>
+                        <div class="tree-person">
+                            <div class="name">Severin</div>
+                            <div class="role">
+                                <span class="fr">Papa</span>
+                                <span class="de">Papa</span>
+                                <span class="en">Father</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-connector"></div>
+
+                <!-- Two-column: Mother's side / Father's side -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; width: 100%;">
+                    <!-- Mother's side (Elise) -->
+                    <div class="tree-group">
+                        <div class="tree-section-title">
+                            <span class="fr"><i class="fas fa-star"></i> Côté d'Elise</span>
+                            <span class="de"><i class="fas fa-star"></i> Elises Seite</span>
+                            <span class="en"><i class="fas fa-star"></i> Elise's side</span>
+                        </div>
+                        <div class="tree-couple" style="margin-bottom: .75rem;">
+                            <div class="tree-person">
+                                <div class="name">Colette</div>
+                                <div class="role">
+                                    <span class="fr">Grand-mère</span>
+                                    <span class="de">Grossmutter</span>
+                                    <span class="en">Grandmother</span>
+                                </div>
+                            </div>
+                            <span class="heart">&hearts;</span>
+                            <div class="tree-person">
+                                <div class="name">Marc</div>
+                                <div class="role">
+                                    <span class="fr">Grand-père</span>
+                                    <span class="de">Grossvater</span>
+                                    <span class="en">Grandfather</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tree-person">
+                            <div class="name">Charles</div>
+                            <div class="role">
+                                <span class="fr">Oncle (frère d'Elise)</span>
+                                <span class="de">Onkel (Bruder von Elise)</span>
+                                <span class="en">Uncle (Elise's brother)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Father's side (Severin) -->
+                    <div class="tree-group">
+                        <div class="tree-section-title">
+                            <span class="fr"><i class="fas fa-star"></i> Côté de Severin</span>
+                            <span class="de"><i class="fas fa-star"></i> Severins Seite</span>
+                            <span class="en"><i class="fas fa-star"></i> Severin's side</span>
+                        </div>
+                        <div class="tree-person" style="margin-bottom: .75rem;">
+                            <div class="name">Hanni</div>
+                            <div class="role">
+                                <span class="fr">Grand-mère</span>
+                                <span class="de">Grossmutter</span>
+                                <span class="en">Grandmother</span>
+                            </div>
+                        </div>
+                        <div class="tree-couple" style="margin-bottom: .75rem;">
+                            <div class="tree-person">
+                                <div class="name">Hubert</div>
+                                <div class="role">
+                                    <span class="fr">Oncle</span>
+                                    <span class="de">Onkel</span>
+                                    <span class="en">Uncle</span>
+                                </div>
+                            </div>
+                            <span class="heart">&hearts;</span>
+                            <div class="tree-person">
+                                <div class="name">Zuzka</div>
+                                <div class="role">
+                                    <span class="fr">Partenaire de Hubert</span>
+                                    <span class="de">Partnerin von Hubert</span>
+                                    <span class="en">Hubert's partner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tree-group">
+                            <div class="tree-couple" style="margin-bottom: .5rem;">
+                                <div class="tree-person">
+                                    <div class="name">Meinrad</div>
+                                    <div class="role">
+                                        <span class="fr">Oncle</span>
+                                        <span class="de">Onkel</span>
+                                        <span class="en">Uncle</span>
+                                    </div>
+                                </div>
+                                <span class="heart">&hearts;</span>
+                                <div class="tree-person">
+                                    <div class="name">Sajedeh</div>
+                                    <div class="role">
+                                        <span class="fr">Partenaire de Meinrad</span>
+                                        <span class="de">Partnerin von Meinrad</span>
+                                        <span class="en">Meinrad's partner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tree-person">
+                                <div class="name">Andrin</div>
+                                <div class="role">
+                                    <span class="fr">Fils</span>
+                                    <span class="de">Sohn</span>
+                                    <span class="en">Son</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Godparents -->
+                <div class="tree-section-title">
+                    <span class="fr"><i class="fas fa-wand-magic-sparkles"></i> Parrain &amp; Marraine</span>
+                    <span class="de"><i class="fas fa-wand-magic-sparkles"></i> Pate &amp; Patin</span>
+                    <span class="en"><i class="fas fa-wand-magic-sparkles"></i> Godparents</span>
+                </div>
+                <div class="tree-row">
+                    <div class="tree-group">
+                        <div class="tree-couple">
+                            <div class="tree-person">
+                                <div class="name">Floriane</div>
+                                <div class="role">
+                                    <span class="fr">Marraine de Jules</span>
+                                    <span class="de">Patin von Jules</span>
+                                    <span class="en">Jules' godmother</span>
+                                </div>
+                            </div>
+                            <span class="heart">&hearts;</span>
+                            <div class="tree-person">
+                                <div class="name">Christophe</div>
+                                <div class="role">
+                                    <span class="fr">Partenaire de Floriane</span>
+                                    <span class="de">Partner von Floriane</span>
+                                    <span class="en">Floriane's partner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tree-row" style="margin-top: .5rem;">
+                            <div class="tree-person">
+                                <div class="name">Emma</div>
+                                <div class="role">
+                                    <span class="fr">Fille</span>
+                                    <span class="de">Tochter</span>
+                                    <span class="en">Daughter</span>
+                                </div>
+                            </div>
+                            <div class="tree-person">
+                                <div class="name">Marie</div>
+                                <div class="role">
+                                    <span class="fr">Fille</span>
+                                    <span class="de">Tochter</span>
+                                    <span class="en">Daughter</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tree-couple">
+                        <div class="tree-person">
+                            <div class="name">Johannes</div>
+                            <div class="role">
+                                <span class="fr">Parrain de Jules</span>
+                                <span class="de">Pate von Jules</span>
+                                <span class="en">Jules' godfather</span>
+                            </div>
+                        </div>
+                        <span class="heart">&hearts;</span>
+                        <div class="tree-person">
+                            <div class="name">Ana</div>
+                            <div class="role">
+                                <span class="fr">Partenaire de Johannes</span>
+                                <span class="de">Partnerin von Johannes</span>
+                                <span class="en">Johannes' partner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neighbours -->
+                <div class="tree-section-title">
+                    <span class="fr"><i class="fas fa-house-chimney"></i> Les meilleurs voisins</span>
+                    <span class="de"><i class="fas fa-house-chimney"></i> Die besten Nachbarn</span>
+                    <span class="en"><i class="fas fa-house-chimney"></i> Best neighbours</span>
+                </div>
+                <div class="tree-row">
+                    <div class="tree-couple">
+                        <div class="tree-person">
+                            <div class="name">Roman</div>
+                            <div class="role">
+                                <span class="fr">Ami des parents</span>
+                                <span class="de">Freund der Eltern</span>
+                                <span class="en">Friend of the parents</span>
+                            </div>
+                        </div>
+                        <span class="heart">&hearts;</span>
+                        <div class="tree-person">
+                            <div class="name">Tove</div>
+                            <div class="role">
+                                <span class="fr">Amie des parents</span>
+                                <span class="de">Freundin der Eltern</span>
+                                <span class="en">Friend of the parents</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -386,8 +765,8 @@
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
         }
 
-        // Map – Kanu-Club Dietikon, Unterengstringen
-        const lat = 47.4044, lng = 8.4295;
+        // Map – Kanu-Club Dietikon (GPS: 47°24'15.2"N 8°24'28.6"E)
+        const lat = 47.404222, lng = 8.407944;
         const map = L.map('map').setView([lat, lng], 15);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
