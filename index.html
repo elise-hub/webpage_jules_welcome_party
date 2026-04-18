@@ -205,17 +205,9 @@
         }
         .tree-couple {
             display: flex; align-items: center; gap: .5rem;
-            flex-wrap: wrap; justify-content: center;
         }
         .tree-couple .heart {
             color: #f6587a; font-size: .85rem;
-        }
-
-        .tree-parents-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            width: 100%;
         }
 
         /* ── Venue / Map Section ── */
@@ -275,22 +267,14 @@
         @media (max-width: 768px) {
             header h1 { font-size: 2.4rem; }
             .section-heading { font-size: 1.8rem; }
-            nav { flex-wrap: wrap; gap: .5rem; padding: .75rem 1rem; }
-            nav .brand { font-size: .95rem; }
             nav ul { display: none; }
-            nav .nav-right { gap: .75rem; }
-            .lang-btn { padding: .2rem .4rem; font-size: .7rem; }
             .map-image-grid { grid-template-columns: 1fr; }
-            .venue-photo { height: 250px; }
-            .tree-parents-grid { grid-template-columns: 1fr; }
-            .tree-row { gap: .5rem; }
-            .tree-person { min-width: 90px; padding: .6rem .8rem; }
-            .tree-person .name { font-size: .8rem; }
-            .tree-person .role { font-size: .68rem; }
+            .venue-photo { height: 280px; }
+            .tree-row { gap: .75rem; }
+            .tree-person { min-width: 100px; padding: .75rem 1rem; }
+            .tree-person .name { font-size: .85rem; }
             .tree-person.baby { min-width: 100px; min-height: 100px; padding: 1rem; }
             .tree-person.baby .name { font-size: 1.1rem; }
-            section { padding: 3.5rem 1rem; }
-            .btn-xl { padding: .7rem 1.5rem; font-size: .8rem; }
         }
     </style>
 </head>
@@ -396,28 +380,32 @@
             <div class="food-grid">
                 <div class="food-card">
                     <i class="fas fa-fire-flame-curved"></i>
-                    <h3><span class="fr">Le grill</span><span class="de">Der Grill</span><span class="en">The Grill</span></h3>
+                    <h3><span class="fr">Le barbecue</span><span class="de">Der Grill</span><span class="en">The Grill</span></h3>
                     <p>
-                        <span class="fr">Un feu sera préparé pour que chacun puisse faire son propre grill. Venez avec votre aliment préféré !</span>
-                        <span class="de">Ein Feuer wird vorbereitet, damit jeder seinen eigenen Grill machen kann. Kommt mit eurem Lieblingsessen!</span>
-                        <span class="en">A fire will be prepared so everyone can grill their own food. Bring your favourite thing to grill!</span>
+                        <span class="fr">Un feu sera préparé pour que chacun puisse faire son propre grill. Apportez vos grillades préférées !</span>
+                        <span class="de">Ein Feuer wird vorbereitet, damit jeder seinen eigenen Grill machen kann. Bringt eure Lieblingsgrillsachen&nbsp;!</span>
+                        <span class="en">A fire will be prepared so everyone can grill their own food. Bring your favourite things to grill&nbsp;!</span>
                     </p>
                 </div>
                 <div class="food-card">
                     <i class="fas fa-basket-shopping"></i>
                     <h3><span class="fr">À apporter</span><span class="de">Mitzubringen</span><span class="en">Please Bring</span></h3>
+                    <ul style="margin-bottom:.75rem">
+                        <li>
+                            <span class="fr">Quelques idées&nbsp;: bon steak, cervelat ou chipolata, halloumi, maïs, légumes…</span>
+                            <span class="de">Ideen: Fleisch, Würste, Halloumi, Mais, Gemüse…</span>
+                            <span class="en">Some ideas: meat, sausages, halloumi, corn, vegetables…</span>
+                        </li>
+                    </ul>
                     <ul>
-                        <li><span class="fr">Viande, saucisses</span><span class="de">Fleisch, Würste</span><span class="en">Meat, sausages</span></li>
-                        <li>Halloumi</li>
-                        <li><span class="fr">Maïs, légumes</span><span class="de">Mais, Gemüse</span><span class="en">Corn, vegetables</span></li>
-                        <li><span class="fr">Jeux (indoor ou outdoor) si vous le souhaitez !</span><span class="de">Spiele (drinnen oder draussen) nach Lust und Laune!</span><span class="en">Games (indoor or outdoor) if you fancy!</span></li>
+                        <li><span class="fr">Jeux (indoor ou outdoor) si vous le souhaitez&nbsp;!</span><span class="de">Spiele (drinnen oder draußen) nach Lust und Laune!</span><span class="en">Games (indoor or outdoor) if they wish!</span></li>
                     </ul>
                 </div>
                 <div class="food-card">
                     <i class="fas fa-bowl-food"></i>
                     <h3><span class="fr">Fourni sur place</span><span class="de">Wird bereitgestellt</span><span class="en">Provided</span></h3>
                     <ul>
-                        <li><span class="fr">Une variété de salades</span><span class="de">Eine Auswahl an Salaten</span><span class="en">A variety of salads</span></li>
+                        <li><span class="fr">Salades composées</span><span class="de">Eine Auswahl an Salaten</span><span class="en">A variety of salads</span></li>
                         <li><span class="fr">Pains</span><span class="de">Brot</span><span class="en">Bread</span></li>
                         <li><span class="fr">Boissons</span><span class="de">Getränke</span><span class="en">Drinks</span></li>
                         <li><span class="fr">Desserts</span><span class="de">Desserts</span><span class="en">Desserts</span></li>
@@ -563,7 +551,7 @@
                 <div class="tree-connector"></div>
 
                 <!-- Two-column: Mother's side / Father's side -->
-                <div class="tree-parents-grid">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; width: 100%;">
                     <!-- Mother's side (Elise) -->
                     <div class="tree-group">
                         <div class="tree-section-title">
@@ -593,9 +581,9 @@
                         <div class="tree-person">
                             <div class="name">Charles</div>
                             <div class="role">
-                                <span class="fr">Oncle (frère d'Elise)</span>
-                                <span class="de">Onkel (Bruder von Elise)</span>
-                                <span class="en">Uncle (Elise's brother)</span>
+                                <span class="fr">Oncle</span>
+                                <span class="de">Onkel</span>
+                                <span class="en">Uncle</span>
                             </div>
                         </div>
                     </div>
@@ -679,7 +667,7 @@
                                 <div class="name">Floriane</div>
                                 <div class="role">
                                     <span class="fr">Marraine de Jules</span>
-                                    <span class="de">Patin von Jules</span>
+                                    <span class="de">Götti von Jules</span>
                                     <span class="en">Jules' godmother</span>
                                 </div>
                             </div>
@@ -717,7 +705,7 @@
                             <div class="name">Johannes</div>
                             <div class="role">
                                 <span class="fr">Parrain de Jules</span>
-                                <span class="de">Pate von Jules</span>
+                                <span class="de">Gotti von Jules</span>
                                 <span class="en">Jules' godfather</span>
                             </div>
                         </div>
@@ -767,6 +755,18 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 <span>Jules Welcome Party</span></p>
+        <div style="margin-top:1.2rem; font-family:'Droid Serif',serif; font-size:.98rem; opacity:.92;">
+            🎉 <span class="fr">On se réjouit de tous vous revoir&nbsp;!</span>
+            <span class="de">Wir freuen uns auf euch!</span>
+            <span class="en">Looking forward to seeing you at the party!</span>
+        </div>
+        <div style="margin-top:1.2rem; opacity:.55; font-size:.85rem; display:flex; align-items:center; justify-content:center; gap:.4em;">
+            <span>Page generated using</span>
+            <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;text-decoration:none;color:inherit;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:.18em;fill:currentColor;"><path d="M23.922 16.992c-.861 1.495-5.859 5.023-11.922 5.023-6.063 0-11.061-3.528-11.922-5.023A.641.641 0 0 1 0 16.736v-2.869a.841.841 0 0 1 .053-.22c.372-.935 1.347-2.292 2.605-2.656.167-.429.414-1.055.644-1.517a10.195 10.195 0 0 1-.052-1.086c0-1.331.282-2.499 1.132-3.368.397-.406.89-.717 1.474-.952 1.399-1.136 3.392-2.093 6.122-2.093 2.731 0 4.767.957 6.166 2.093.584.235 1.077.546 1.474.952.85.869 1.132 2.037 1.132 3.368 0 .368-.014.733-.052 1.086.23.462.477 1.088.644 1.517 1.258.364 2.233 1.721 2.605 2.656a.832.832 0 0 1 .053.22v2.869a.641.641 0 0 1-.078.256ZM12.172 11h-.344a4.323 4.323 0 0 1-.355.508C10.703 12.455 9.555 13 7.965 13c-1.725 0-2.989-.359-3.782-1.259a2.005 2.005 0 0 1-.085-.104L4 11.741v6.585c1.435.779 4.514 2.179 8 2.179 3.486 0 6.565-1.4 8-2.179v-6.585l-.098-.104s-.033.045-.085.104c-.793.9-2.057 1.259-3.782 1.259-1.59 0-2.738-.545-3.508-1.492a4.323 4.323 0 0 1-.355-.508h-.016.016Zm.641-2.935c.136 1.057.403 1.913.878 2.497.442.544 1.134.938 2.344.938 1.573 0 2.292-.337 2.657-.751.384-.435.558-1.15.558-2.361 0-1.14-.243-1.847-.705-2.319-.477-.488-1.319-.862-2.824-1.025-1.487-.161-2.192.138-2.533.529-.269.307-.437.808-.438 1.578v.021c0 .265.021.562.063.893Zm-1.626 0c.042-.331.063-.628.063-.894v-.02c-.001-.77-.169-1.271-.438-1.578-.341-.391-1.046-.69-2.533-.529-1.505.163-2.347.537-2.824 1.025-.462.472-.705 1.179-.705 2.319 0 1.211.175 1.926.558 2.361.365.414 1.084.751 2.657.751 1.21 0 1.902-.394 2.344-.938.475-.584.742-1.44.878-2.497Z"/><path d="M14.5 14.25a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Zm-5 0a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Z"/></svg>
+                <span style="font-family:'Montserrat',sans-serif;font-size:.85em;">GitHub Copilot</span>
+            </a>
+        </div>
     </footer>
 
     <!-- Leaflet JS -->

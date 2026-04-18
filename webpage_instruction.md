@@ -9,8 +9,9 @@ For those coming by train: Stop in Dietikon Bahnhof train station and walk 10 mi
 The Grill:
 A fire will be prepared so that everyone can make their own grill. 
 To bring:
-Inform people that they need to bring theirs favorite foods (meat, sausages, halloumi, corn, vegetables). 
-If you wish, bring indoor or outdoor games.
+Inform people that they need to bring theirs favorite things to grill. 
+You can give ideas like meat, sausages, halloumi, corn, vegetables.
+If they wish, bring indoor or outdoor games.
 What will be available for sharing:
 A variety of salads, bread, drinks, desserts will be provided. 
 Forks, knives, and glasses will be available for all guests.
@@ -36,6 +37,9 @@ Here are the links:
     - The godmother of Jules is Floriane. She has a partner called Christophe and 2 daughters called Emma and Marie.    
     - The godfather of Jules is Johannes. His partner is Ana.
     - The best neighbours ever from Jules are called Roman and Tove. They are friends from the parents. They are together as a couple.
+
+- Write at the bottom of the webpage that we are very much looking forward to seeing everyone again!
+Also write in small that this webpage has been generated using Github Copilot (with the github copilot symbol).
 
 - Wedpage design: 
  - Use Event Jekyll Theme.
