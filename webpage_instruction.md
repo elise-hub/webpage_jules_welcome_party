@@ -1,5 +1,5 @@
 - Event name: Jules Welcome Party (in font Kranky from Google Fonts)
-- Event data: June 6th 2026. Expected arrival time 12 o'clock.
+- Event data: June 6th 2026. Expected arrival time 11:30.
 - Event location: Kanu-Club Dietikon. Add a map with a red marker at the following GPS 47°24'15.2"N 8°24'28.6"E location. Add a link to Google Maps. Add the picture "kanuclub_picture.jpg" next to the map (add as a legend that the picture comes from the kanu club website).
 The kanu club website is https://www.kanuclub-dietikon.ch/.
 For those coming by car: there is a parking in front of the place.
