@@ -12,6 +12,7 @@ To bring:
 Inform people that they need to bring theirs favorite things to grill. 
 You can give ideas like meat, sausages, halloumi, corn, vegetables.
 If they wish, bring indoor or outdoor games.
+If they wish, bring bathing suits for swimming in the Limmat.
 What will be available for sharing:
 A variety of salads, bread, drinks, desserts will be provided. 
 Forks, knives, and glasses will be available for all guests.
@@ -20,10 +21,13 @@ Forks, knives, and glasses will be available for all guests.
 The plan is to stay mainly outside in the garden of the club. In case of bad weather, there is also a cabin that has the capacity for everyone.
 There is also a Kompotoi toilet. 
 There is no drinkable water on site, only ground water. There will be water bottles for drinks.
+
+
 Your presence at the party is the greatest gift Jules could wish for.
 
 - Guests section (at the end of the webpage):
-Do a tree reprensenting relatives from Jules. 
+Do a genealogical tree reprensenting relatives from Jules. 
+Add links between generations. Below the names, add title of the person for Jules.
 Here are the links:
     - Jules is the baby.
     - His mother is Elise

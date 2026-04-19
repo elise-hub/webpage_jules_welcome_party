@@ -74,6 +74,27 @@
             margin-bottom: 1rem;
             text-shadow: 2px 3px 8px rgba(0,0,0,.4);
         }
+        header h1::before,
+        header h1::after {
+            content: ' \2726 ';
+            color: #fed136;
+            font-size: 2.2rem;
+            opacity: .85;
+            vertical-align: middle;
+        }
+        .hero-deco {
+            color: #fed136;
+            font-size: 1.4rem;
+            letter-spacing: .3rem;
+            margin-bottom: .6rem;
+            opacity: .85;
+        }
+            color: #fed136;
+            font-size: 1.4rem;
+            letter-spacing: .3rem;
+            margin-bottom: .6rem;
+            opacity: .85;
+        }
         header .intro-heading-detail {
             font-family: 'Droid Serif', serif;
             font-size: 1.15rem; opacity: .85; margin-bottom: 2rem;
@@ -301,11 +322,6 @@
     <!-- Hero -->
     <header id="page-top">
         <h1>Jules Welcome Party</h1>
-        <div class="intro-heading-detail">
-            <span class="fr">Samedi 6 juin 2026 &bull; Arrivée à 12h00 &bull; Kanu-Club Dietikon</span>
-            <span class="de">Samstag, 6. Juni 2026 &bull; Ankunft um 12:00 Uhr &bull; Kanu-Club Dietikon</span>
-            <span class="en">Saturday, June 6th 2026 &bull; Arrival at 12:00 &bull; Kanu-Club Dietikon</span>
-        </div>
         <a class="btn-xl" href="#details">
             <span class="fr">En savoir plus</span>
             <span class="de">Mehr erfahren</span>
@@ -398,7 +414,8 @@
                         </li>
                     </ul>
                     <ul>
-                        <li><span class="fr">Jeux (indoor ou outdoor) si vous le souhaitez&nbsp;!</span><span class="de">Spiele (drinnen oder draußen) nach Lust und Laune!</span><span class="en">Games (indoor or outdoor) if they wish!</span></li>
+                        <li><span class="fr">Jeux (indoor ou outdoor)</span><span class="de">Spiele (drinnen oder draußen)</span><span class="en">Games (indoor or outdoor)</span></li>
+                        <li><span class="fr">Maillot de bain pour nager dans la Limmat si vous le souhaitez&nbsp;!</span><span class="de">Badebekleidung zum Schwimmen in der Limmat nach Lust und Laune!</span><span class="en">Bathing suit for swimming in the Limmat if you wish!</span></li>
                     </ul>
                 </div>
                 <div class="food-card">
@@ -530,20 +547,10 @@
                     <div class="tree-couple">
                         <div class="tree-person">
                             <div class="name">Elise</div>
-                            <div class="role">
-                                <span class="fr">Maman</span>
-                                <span class="de">Mama</span>
-                                <span class="en">Mother</span>
-                            </div>
                         </div>
                         <span class="heart">&hearts;</span>
                         <div class="tree-person">
                             <div class="name">Severin</div>
-                            <div class="role">
-                                <span class="fr">Papa</span>
-                                <span class="de">Papa</span>
-                                <span class="en">Father</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -578,6 +585,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="tree-connector"></div>
                         <div class="tree-person">
                             <div class="name">Charles</div>
                             <div class="role">
@@ -603,6 +611,7 @@
                                 <span class="en">Grandmother</span>
                             </div>
                         </div>
+                        <div class="tree-connector"></div>
                         <div class="tree-couple" style="margin-bottom: .75rem;">
                             <div class="tree-person">
                                 <div class="name">Hubert</div>
@@ -616,9 +625,9 @@
                             <div class="tree-person">
                                 <div class="name">Zuzka</div>
                                 <div class="role">
-                                    <span class="fr">Partenaire de Hubert</span>
-                                    <span class="de">Partnerin von Hubert</span>
-                                    <span class="en">Hubert's partner</span>
+                                    <span class="fr">Tante</span>
+                                    <span class="de">Tante</span>
+                                    <span class="en">Aunt</span>
                                 </div>
                             </div>
                         </div>
@@ -636,18 +645,19 @@
                                 <div class="tree-person">
                                     <div class="name">Sajedeh</div>
                                     <div class="role">
-                                        <span class="fr">Partenaire de Meinrad</span>
-                                        <span class="de">Partnerin von Meinrad</span>
-                                        <span class="en">Meinrad's partner</span>
+                                        <span class="fr">Tante</span>
+                                        <span class="de">Tante</span>
+                                        <span class="en">Aunt</span>
                                     </div>
                                 </div>
                             </div>
+                            <div class="tree-connector"></div>
                             <div class="tree-person">
                                 <div class="name">Andrin</div>
                                 <div class="role">
-                                    <span class="fr">Fils</span>
-                                    <span class="de">Sohn</span>
-                                    <span class="en">Son</span>
+                                    <span class="fr">Cousin</span>
+                                    <span class="de">Cousin</span>
+                                    <span class="en">Cousin</span>
                                 </div>
                             </div>
                         </div>
@@ -666,37 +676,23 @@
                             <div class="tree-person">
                                 <div class="name">Floriane</div>
                                 <div class="role">
-                                    <span class="fr">Marraine de Jules</span>
-                                    <span class="de">Götti von Jules</span>
-                                    <span class="en">Jules' godmother</span>
+                                    <span class="fr">Marraine</span>
+                                    <span class="de">Gotti</span>
+                                    <span class="en">Godmother</span>
                                 </div>
                             </div>
                             <span class="heart">&hearts;</span>
                             <div class="tree-person">
                                 <div class="name">Christophe</div>
-                                <div class="role">
-                                    <span class="fr">Partenaire de Floriane</span>
-                                    <span class="de">Partner von Floriane</span>
-                                    <span class="en">Floriane's partner</span>
-                                </div>
                             </div>
                         </div>
+                        <div class="tree-connector"></div>
                         <div class="tree-row" style="margin-top: .5rem;">
                             <div class="tree-person">
                                 <div class="name">Emma</div>
-                                <div class="role">
-                                    <span class="fr">Fille</span>
-                                    <span class="de">Tochter</span>
-                                    <span class="en">Daughter</span>
-                                </div>
                             </div>
                             <div class="tree-person">
                                 <div class="name">Marie</div>
-                                <div class="role">
-                                    <span class="fr">Fille</span>
-                                    <span class="de">Tochter</span>
-                                    <span class="en">Daughter</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -704,19 +700,14 @@
                         <div class="tree-person">
                             <div class="name">Johannes</div>
                             <div class="role">
-                                <span class="fr">Parrain de Jules</span>
-                                <span class="de">Gotti von Jules</span>
-                                <span class="en">Jules' godfather</span>
+                                <span class="fr">Parrain</span>
+                                <span class="de">Götti</span>
+                                <span class="en">Godfather</span>
                             </div>
                         </div>
                         <span class="heart">&hearts;</span>
                         <div class="tree-person">
                             <div class="name">Ana</div>
-                            <div class="role">
-                                <span class="fr">Partenaire de Johannes</span>
-                                <span class="de">Partnerin von Johannes</span>
-                                <span class="en">Johannes' partner</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -731,20 +722,10 @@
                     <div class="tree-couple">
                         <div class="tree-person">
                             <div class="name">Roman</div>
-                            <div class="role">
-                                <span class="fr">Ami des parents</span>
-                                <span class="de">Freund der Eltern</span>
-                                <span class="en">Friend of the parents</span>
-                            </div>
                         </div>
                         <span class="heart">&hearts;</span>
                         <div class="tree-person">
                             <div class="name">Tove</div>
-                            <div class="role">
-                                <span class="fr">Amie des parents</span>
-                                <span class="de">Freundin der Eltern</span>
-                                <span class="en">Friend of the parents</span>
-                            </div>
                         </div>
                     </div>
                 </div>
