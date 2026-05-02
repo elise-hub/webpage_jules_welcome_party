@@ -3,7 +3,6 @@
 - Event location: Kanu-Club Dietikon. Add a map with a red marker at the following GPS 47°24'15.2"N 8°24'28.6"E location. Add a link to Google Maps. Add the picture "kanuclub_picture.jpg" next to the map (add as a legend that the picture comes from the kanu club website).
 The kanu club website is https://www.kanuclub-dietikon.ch/.
 For those coming by car: there is a parking in front of the place.
-For those coming by train: Stop in Dietikon Bahnhof train station and walk 10 minutes
 
 - Food section:
 The Grill:
@@ -14,7 +13,7 @@ You can give ideas like meat, sausages, halloumi, corn, vegetables.
 If they wish, bring indoor or outdoor games.
 If they wish, bring bathing suits for swimming in the Limmat.
 What will be available for sharing:
-A variety of salads, bread, drinks, desserts will be provided. 
+A variety of salads, bread, Sauces (ketchup, mayonnaise, mustard (de Dijon of course!)) , drinks, desserts will be provided. 
 Forks, knives, and glasses will be available for all guests.
 
 - Practical info section:

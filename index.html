@@ -2,7 +2,7 @@
 <html lang="fr" id="html-root">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Jules Welcome Party</title>
     <!-- "Kranky" from Google Fonts is used for the event title (https://fonts.google.com/specimen/Kranky). -->
     <link href="https://fonts.googleapis.com/css2?family=Kranky&family=Montserrat:wght@400;700&family=Droid+Serif:ital,wght@0,400;1,400&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
@@ -76,7 +76,7 @@
         }
         header h1::before,
         header h1::after {
-            content: ' \2726 ';
+            content: ' 🎉 ';
             color: #fed136;
             font-size: 2.2rem;
             opacity: .85;
@@ -283,13 +283,22 @@
             header h1 { font-size: 2.4rem; }
             .section-heading { font-size: 1.8rem; }
             nav ul { display: none; }
+            nav { padding: .75rem 1rem; }
+            section { padding: 2.5rem 1rem; }
+            .container { padding: 0 .25rem; }
             .map-image-grid { grid-template-columns: 1fr; }
-            .venue-photo { height: 280px; }
+            .venue-photo { height: 220px; }
+            .venue-info-grid { grid-template-columns: 1fr; }
+            .details-grid { grid-template-columns: 1fr; }
+            .food-grid { grid-template-columns: 1fr; }
+            .btn-xl { padding: .7rem 1.2rem; font-size: .85rem; }
+            .map-link-wrap { display: flex; flex-direction: column; gap: .75rem; align-items: center; }
             .tree-row { gap: .75rem; }
             .tree-person { min-width: 100px; padding: .75rem 1rem; }
             .tree-person .name { font-size: .85rem; }
             .tree-person.baby { min-width: 100px; min-height: 100px; padding: 1rem; }
             .tree-person.baby .name { font-size: 1.1rem; }
+            div[style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
         }
     </style>
 </head>
@@ -421,8 +430,7 @@
                         <li><span class="fr">Sauces (ketchup, mayonnaise et moutarde de Dijon bien sûr!)</span><span class="de">Verschiedene Saucen (ketchup, mayonnaise und moutarde de Dijon bien sûr!)</span><span class="en">Various sauces (ketchup, mayonnaise and mustard de Dijon of course!)</span></li>
                         <li><span class="fr">Boissons</span><span class="de">Getränke</span><span class="en">Drinks</span></li>
                         <li><span class="fr">Desserts</span><span class="de">Desserts</span><span class="en">Desserts</span></li>
-                        <li><span class="fr">Couverts et verres pour tous</span><span class="de">Besteck und Gläser für alle</span><span class="en">Forks, knives, and glasses for all guests</span></li>
-                    </ul>
+                        <li><span class="fr">Couverts, assiettes et verres pour tous</span><span class="de">Besteck, Teller und Gläser für alle</span><span class="en">Forks, plates, and glasses for all guests</span></li>
                 </div>
             </div>
         </div>
@@ -472,14 +480,6 @@
                         <span class="fr">Un parking est disponible devant le club.</span>
                         <span class="de">Es gibt einen Parkplatz vor dem Klub.</span>
                         <span class="en">There is a parking lot in front of the club.</span>
-                    </p>
-                </div>
-                <div class="venue-info-card">
-                    <h4><i class="fas fa-train"></i><span class="fr">En train</span><span class="de">Mit dem Zug</span><span class="en">By Train</span></h4>
-                    <p>
-                        <span class="fr">Arrêtez-vous à la gare de Dietikon Bahnhof, puis marchez 10 minutes.</span>
-                        <span class="de">Haltet am Bahnhof Dietikon und geht 10 Minuten zu Fuss.</span>
-                        <span class="en">Stop at Dietikon Bahnhof train station and walk 10 minutes.</span>
                     </p>
                 </div>
                 <div class="venue-info-card">
